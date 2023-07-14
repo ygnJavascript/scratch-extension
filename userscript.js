@@ -26,7 +26,7 @@ function createPopup(mainElement){
         f(".ygnprojectthumb").src="https://uploads.scratch.mit.edu/projects/thumbnails/"+mainElement.getAttribute("href").split("/")[2]+".png"
         fetch("https://api.scratch.mit.edu/projects/"+mainElement.getAttribute("href").split("/")[2]).then(data=>data.json()).then(data=>{
             f(".ygnuserlogo").src="https://uploads.scratch.mit.edu/users/avatars/"+data.author.id+".png"
-            f(".ygnprojectname").innerText=truncateText(data.title,28)+"T"
+            f(".ygnprojectname").innerText=truncateText(data.title,28)
             f(".ygnusername").innerText=truncateText(data.author.username,12)
             f(".ygnloves").innerText=formatNumber(data.stats.loves)
             f(".ygnfavs").innerText=formatNumber(data.stats.favorites)
@@ -36,6 +36,7 @@ function createPopup(mainElement){
                 f(".ygnfcount").innerText=" ("+x.split("&raquo;")[1].split("(")[1].split(")")[0]+" Followers)"
                 //console.log(x)
             })
+            console.log("Popup Created...")
         })
     }
 }
