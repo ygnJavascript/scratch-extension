@@ -8,5 +8,7 @@ When you hover your mouse over any of your Scratch projects, it displays a card 
 [Install Userscript Via Greasyfork](https://greasyfork.org/scripts/470844-scratch-extension-by-ygn-ygnills/code/Scratch%20Extension%20by%20YGN%20(@ygnills).user.js)<br><br>
 
 <hr>
+
+# credit
 Developer: [@ygnills](https://scratch.mit.edu/users/ygnills/) <br>
 Thanks For Idea: [@games-coder](https://scratch.mit.edu/users/games-coder/)
