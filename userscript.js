@@ -1,6 +1,6 @@
 let f=(x)=>{return document.querySelector(x)}
 let fa=(x)=>{return document.querySelectorAll(x)}
-
+ 
 function formatNumber(number) {
     if (number >= 1000) {
         const units = ['k', 'M', 'B', 'T'];
@@ -11,7 +11,7 @@ function formatNumber(number) {
         return number.toString();
     }
 }
-
+ 
 function truncateText(text,range) {
     if (text.length > range) {
         return text.slice(0, range) + "...";
@@ -19,7 +19,7 @@ function truncateText(text,range) {
         return text;
     }
 }
-
+ 
 function createPopup(mainElement){
     if(!isNaN(parseInt(mainElement.getAttribute("href").split("/")[2]))){
         f(".ygnpopup").style.display="block"
@@ -36,11 +36,10 @@ function createPopup(mainElement){
                 f(".ygnfcount").innerText=" ("+x.split("&raquo;")[1].split("(")[1].split(")")[0]+" Followers)"
                 //console.log(x)
             })
-            console.log("Popup Created...")
         })
     }
 }
-
+ 
 window.addEventListener("load",()=>{
     let popupHTML=document.createElement("DIV")
     popupHTML.setAttribute("class","ygnpopup")
@@ -53,7 +52,7 @@ window.addEventListener("load",()=>{
         <img src="https://scratch.mit.edu/svgs/project/fav-yellow.svg" width="32"><font style="font-size:15pt;" class="ygnfavs">0</font>&nbsp;&nbsp;&nbsp;
         <img src="https://scratch.mit.edu/svgs/project/remix-gray.svg" width="32"><font style="font-size:15pt;" class="ygnremixes">0</font>&nbsp;&nbsp;&nbsp;
         <img src="https://scratch.mit.edu/svgs/project/views-gray.svg" width="32"><font style="font-size:15pt;" class="ygnviews">0</font>&nbsp;&nbsp;&nbsp;
-
+ 
         </div><h6>Scratch Eklenti by YGN (@ygnills)</h6>
     `
     f(".ygnpopup").style=`
@@ -68,40 +67,39 @@ window.addEventListener("load",()=>{
         display:none;
         box-shadow:-5px 5px 5px black;
     `
-
+ 
     f(".ygnusercont").style=`
         display:flex;
         align-items:center;
     `
-
+ 
     f(".ygnstatscont").style=`
         display:flex;
         align-items:center;
         justify-content:center;
     `
-
+ 
     fa("a").forEach(x=>{
         x.addEventListener("mouseover",()=>{
             createPopup(x)
         })
-
+ 
         x.addEventListener("mouseout",()=>{
             //setTimeout(()=>{
             f(".ygnpopup").style.display="none"
             //},5000)
         })
     })
-
+ 
     document.body.addEventListener("DOMNodeInserted",(event)=>{
         if(event.target.querySelector("a")){
             event.target.querySelector("a").addEventListener("mouseover",()=>{
                 createPopup(event.target.querySelector("a"))
             })
-
+ 
             event.target.querySelector("a").addEventListener("mouseout",()=>{
                 f(".ygnpopup").style.display="none"
             })
         }
     })
 })
-
