@@ -1,6 +1,5 @@
 # scratch-extension
 
-<iframe width="1345" height="496" src="https://www.youtube.com/embed/PqOMyjkmGEU" title="YGN Scratch Eklentisi Kurulum &amp; Kullanma" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 When you hover your mouse over any of your Scratch projects, it displays a card with information about that project and its owner.<hr>
 
