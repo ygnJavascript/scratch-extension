@@ -1,7 +1,5 @@
 # scratch-extension
 
-[Watch YouTube Video](https://www.youtube.com/watch?v=PqOMyjkmGEU)
-
 When you hover your mouse over any of your Scratch projects, it displays a card with information about that project and its owner.<hr>
 
 # setup
